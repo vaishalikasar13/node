@@ -1,0 +1,27 @@
+<div class="container">
+	<a routerLink="/add" class="btn btn-success">Add User</a>
+	<br><br>
+  <h6 align="center">USERS</h6>
+             
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Mobile</th>
+        <th>Edit</th>
+         <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{user.name}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.mobile}}</td>
+        <td><a [routerLink]="['/edit',user._id]">Edit</a></td>
+        <td><button (click)="deleteUser(user._id)">Delete</button></td>
+      </tr>
+     
+    </tbody>
+  </table>
+</div>

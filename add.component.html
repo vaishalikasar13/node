@@ -1,0 +1,18 @@
+<div class="container">
+	<form #formData="ngForm" (ngSubmit)="addUser(formData)">
+  <div class="form-group">
+    <label for="email">Name:</label>
+    <input type="text" class="form-control" required id="name" name="name" ngModel>
+  </div>
+  <div class="form-group">
+    <label for="pwd">Email:</label>
+    <input type="email" class="form-control" required id="email" name="email" ngModel>
+  </div>
+ <div class="form-group">
+    <label for="pwd">Mobile:</label>
+    <input type="text" class="form-control" required id="mobile" name="mobile" ngModel>
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+  <h6 *ngIf="isAdded">{{confirmString}}</h6>
+</form>
+</div>
